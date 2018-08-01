@@ -30,7 +30,7 @@ a bit of searching will reveal a file called "README.md", but the password is mi
 
 seems interesting. Let's get it:
 `git checkout 196c3edc79e362fe89e0d75cfeef079d8c67beef`
-(196c3edc79e362fe89e0d75cfeef079d8c67beef is the commit id)
+(**_196c3edc79e362fe89e0d75cfeef079d8c67beef_** is the commit id)
 ...and Walla! now the password is inside README.md:
 - username: bandit29
 - password: bbc96594b4e001778eee9975372716b2
