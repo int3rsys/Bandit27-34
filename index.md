@@ -10,3 +10,5 @@ in the main screen, press 'v' to enter Vim and then we execute:
 
 now we have set up a bash shell. Let's run `:!ls -la`. Now we have found we have a file named "bandit27-do". This files gives us the ability to run files with bandit27 premissions. Let's run `:!./bandit27-do cat /etc/bandit_pass/bandit27` and walla!:
 ![bandit27](https://github.com/int3rsys/Bandit27-34/blob/master/Images/bandit27.png)
+
+The password is: 3ba3118a22e93127a4ed485be72ef5ea
