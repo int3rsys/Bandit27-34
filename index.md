@@ -36,3 +36,10 @@ seems interesting. Let's get it:
 - password: bbc96594b4e001778eee9975372716b2
 
     
+## Bandit Level 30 → Level 30
+
+Again, we start by setting up a new folder (or any place where we can clone the repo). This time we have a clue: No passwords in production! what does that mean? probably that passwords were used in development. Let's dig into the logs:
+`git log`
+nothings there. Let's read packed-refs (Git compresses necessary refs into this file). We have a ref for development, after checking it out, we can read the README.md. We have the password there:
+- username: bandit30
+- password: 5b90576bedb2cc04c86a9e924ce42faf
