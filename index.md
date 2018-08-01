@@ -36,10 +36,20 @@ seems interesting. Let's get it:
 - password: bbc96594b4e001778eee9975372716b2
 
     
-## Bandit Level 30 → Level 30
+## Bandit Level 29 → Level 30
 
 Again, we start by setting up a new folder (or any place where we can clone the repo). This time we have a clue: No passwords in production! what does that mean? probably that passwords were used in development. Let's dig into the logs:
 `git log`
 nothings there. Let's read packed-refs (Git compresses necessary refs into this file). We have a ref for development, after checking it out, we can read the README.md. We have the password there:
 - username: bandit30
 - password: 5b90576bedb2cc04c86a9e924ce42faf
+
+## Bandit Level 30 → Level 31
+
+Clone the given repo, again. Now, we don't have a pass at all, but we have an interesting ref. Trying to checkout the ref (of branch secret) won't work here, because it's broken. Trying to comit, fetch or other actions won't work as well. The way to get the pass is to read the file itself. That can be done by the following methods:
+`git cat-file -p f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea`
+or
+`git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea`
+both ways will output our pass:
+47e603bb428404d265f59c42920d81e5
+
