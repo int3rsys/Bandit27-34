@@ -53,3 +53,20 @@ or
 both ways will output our pass:
 47e603bb428404d265f59c42920d81e5
 
+## Bandit Level 31 → Level 32
+
+Like in previous levels, we clone our repo and read the README.md file. It's said that we need to push a file called key.txt. Let's create one: `echo "May I come in?">key.txt` in the root directory
+Now we need to upload this file to the git repository:
+`git add -f key.txt`
+`git commit -m key.txt`
+`git push origin master`
+and Walla! we have the password:
+>remote: ### Attempting to validate files... ####[K
+>remote:
+>remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.[K
+>remote:
+>remote: Well done! Here is the password for the next level:[K
+>remote: 56a9bf19c63d650ce78e6ec0354ee45e[K
+>remote:
+>remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.[K
+>remote:
