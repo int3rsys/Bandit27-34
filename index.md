@@ -70,3 +70,14 @@ and Walla! we have the password:
 >remote:
 >remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.[K
 >remote:
+
+## Bandit Level 32 → Level 33
+
+At last we don't have to deal with git. We first login into our home directory and find out that we have an ELF file called uppershell. Running it will give us a strange behaviour. It seems that we cannot execute any command, but we have a clue: *sh*, so after googling for sh shell, I have found a manual for it: http://heirloom.sourceforge.net/sh/sh.1.html
+inserting `$0` will give us the interactive bash, now we can actually do something. We want privileged shell, therefore we type:
+`set -p`
+and now all we have to do is to read our password:
+`cat /etc/bandit_pass/bandit23`
+and we have:
+c9c3199ddf4121b10cf581a98d51caee
+
